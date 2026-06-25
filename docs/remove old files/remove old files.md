@@ -64,7 +64,7 @@ Below is a clean, modern example of how to register this script as a scheduled t
 - Uses **PowerShell 7** if installed
 
 ```powershell
-$Action = New-ScheduledTaskAction -Execute "pwsh.exe" -Argument "-File `"`"C:\Scripts\Cleanup-OldLogs.ps1`"`""
+$Action = New-ScheduledTaskAction -Execute "pwsh.exe" -Argument "-File `"`"C:\Scripts\Cleanup-OldLogs.ps1`"`" -DaysToKeep 14"
 $Trigger = New-ScheduledTaskTrigger -Daily -At 3am
 $Principal = New-ScheduledTaskPrincipal -UserId "SYSTEM" -RunLevel Highest
 $Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
