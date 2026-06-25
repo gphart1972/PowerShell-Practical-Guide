@@ -76,5 +76,6 @@ Register-ScheduledTask -TaskName "CleanupOldLogs" -Action $Action -Trigger $Trig
 - This runs as **SYSTEM**, which avoids credential prompts and ensures it runs even when no user is logged in.  
 - If you prefer running under a specific service account, replace `"SYSTEM"` with the username.  
 - Adjust the time (`-At 3am`) as needed.
+- Adjust the number of days to keep with the (`-DaysToKeep 14`) at the end of the action string.
 
 
