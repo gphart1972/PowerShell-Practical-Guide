@@ -14,4 +14,5 @@ It’s just a fun relic from the era when we all spent too much time in terminal
 ```bash
 hexdump -C /dev/urandom | GREP_COLOR='1;32' grep --color=auto 'ca fe'
 ```
-<img width="905" height="541" alt="image" src="https://github.com/user-attachments/assets/89aecd9e-b09c-44df-a3ab-fbe46c378b28" />
+<img width="886" height="502" alt="image" src="https://github.com/user-attachments/assets/80ef403f-0390-4d0e-958a-3fd19b50287e" />
+
