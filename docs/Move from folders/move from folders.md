@@ -56,6 +56,3 @@ Run it like this:
 ```powershell
 .\Flatten-Folder.ps1 -Source "C:\Stuff\Nested" -Destination "C:\Stuff\Flat"
 ```
-
-- [Moving files with PowerShell](ca://s?q=powershell_move_item)
-
