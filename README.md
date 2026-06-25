@@ -1,4 +1,4 @@
-# PowerShell User Guide
+# PowerShell-Practical-Guide
 
 Welcome to the **PowerShell User Guide**, a curated collection of practical, real‑world scripts designed to automate common system‑administration, file‑management, and workflow tasks.  
 Each section in the `/docs` directory focuses on a specific problem area and includes:
