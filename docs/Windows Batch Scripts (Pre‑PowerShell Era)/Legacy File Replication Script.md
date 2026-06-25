@@ -1,4 +1,4 @@
-# Legacy File Replication Script (Robocopy)
+# Legacy File Replication Script
 
 This page documents a legacy batch script used for automated file replication between two servers using **Robocopy**. It represents a common pre‑PowerShell automation pattern: simple, reliable, and easy to troubleshoot. This script is preserved here for historical context and for comparison with modern PowerShell‑based approaches.
 
