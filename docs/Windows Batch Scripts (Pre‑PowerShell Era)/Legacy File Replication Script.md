@@ -12,7 +12,7 @@ This pattern was widely used in small office and departmental IT environments be
 
 ---
 
-## Original Batch Script (Genericized)
+## Original Batch Script
 
 ```bat
 robocopy C:\DataSource\  \\ServerA\SharedData\ /MIR /R:2 /W:10 /LOG:C:\Logs\replication_to_serverA.txt
