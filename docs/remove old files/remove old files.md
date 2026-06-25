@@ -1,5 +1,6 @@
 I created this script to solve a log‑management problem at a previous employer.  
-Their development team had implemented custom logging for a server application, but they had no built‑in support for **circular logging** or automatic cleanup.  
+Their development team had implemented custom logging for a server application, but they had no built‑in support for **circular logging** or automatic cleanup.
+
 Over time, the number of log files grew so large that it began consuming significant disk space.
 
 After meeting with the dev team and agreeing on how many days of logs they needed to retain, I wrote this PowerShell script to automatically delete older log files and keep the system healthy.
