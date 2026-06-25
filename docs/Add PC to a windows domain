@@ -1,3 +1,4 @@
+```powershell
 <#
 .SYNOPSIS
 Joins a computer to an Active Directory domain and configures DNS.
@@ -46,3 +47,4 @@ try {
 catch {
     Write-Host "Domain join failed: $_" -ForegroundColor Red
 }
+```
