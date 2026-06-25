@@ -1,0 +1,48 @@
+<#
+.SYNOPSIS
+Joins a computer to an Active Directory domain and configures DNS.
+
+.DESCRIPTION
+This script selects the active physical network adapter, sets DNS servers,
+and joins the system to the specified AD domain.
+
+.PARAMETER DomainName
+The domain to join.
+
+.PARAMETER DnsServers
+DNS server IP addresses.
+
+.EXAMPLE
+.\join-domain.ps1 -DomainName "example.com"
+#>
+
+param(
+    [string]$DomainName = "example.com",
+    [string[]]$DnsServers = @("xxx.xxx.xxx.xxx", "xxx.xxx.xxx.xxx")
+)
+
+# Get active physical adapter
+$adapter = Get-NetAdapter |
+    Where-Object {
+        $_.Status -eq "Up" -and
+        $_.Virtual -eq $false
+    }
+
+Write-Host "Configuring DNS servers..." -ForegroundColor Yellow
+
+Set-DnsClientServerAddress `
+    -InterfaceAlias $adapter.Name `
+    -ServerAddresses $DnsServers
+
+Write-Host "Joining domain: $DomainName" -ForegroundColor Yellow
+
+try {
+    Add-Computer `
+        -DomainName $DomainName `
+        -Credential (Get-Credential) `
+        -Restart `
+        -ErrorAction Stop
+}
+catch {
+    Write-Host "Domain join failed: $_" -ForegroundColor Red
+}
